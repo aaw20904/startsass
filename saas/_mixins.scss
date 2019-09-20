@@ -1,0 +1,47 @@
+@mixin buttonAni($prop,$prop2,$time,$func){
+     -webkit-transition:($prop $time $func,$prop2 $time $func);
+    -o-transition:($prop $time $func,$prop2 $time $func);
+    transition:($prop $time $func,$prop2 $time $func);
+}
+
+@mixin nav-big-font{
+    font-size: 3.5rem;
+    @media (max-width: 768px){
+        @content;
+        /*font-size: 2.2rem;
+        width:100%;*/
+    }
+    
+}
+
+@mixin nav-content-font{
+    font-size: 1.0rem;
+    @media (max-width: 768px){
+        @content;
+            }
+    
+}
+
+@mixin nav-mnu-paddings{
+    padding:0.5rem 1rem;
+      @media (max-width: 768px){
+        padding: 1.2rem 1rem;
+        border-bottom: 2px solid #bbb;
+          width: 100%;
+    }
+    
+}
+
+@mixin nav-wrap-padding{
+    padding: 10em 0;
+     @media (max-width: 768px){
+    padding: 2rem 0;
+         
+    }
+    
+}
+
+/**************/
+%NavWidthLimit{
+    max-width: 100%;
+}

@@ -1,0 +1,200 @@
+/***https://templated.co/synchronous**/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+/*ol, ul {
+	list-style: none;
+}*/
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*****BACKGROUNDS*/
+/******fonts****/
+/**************/
+nav.homePg div, nav.homePg, section.GridNav article, section.GridNav h1, section.GridNav {
+  max-width: 100%;
+}
+
+section.GridNav h3, section.GridNav h1 {
+  padding: 1rem 0;
+}
+
+section.GridNav {
+  width: 98%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "head1 head1 head1 head1 head1" "head3 head3 head3 head3 head3" "lnk1 lnk2 lnk3 lnk4 lnk5";
+  grid-gap: 8px 8px;
+  place-items: center center;
+  place-content: center center;
+}
+section.GridNav * {
+  font-family: "Roboto", serif;
+}
+section.GridNav h1 {
+  grid-area: head1;
+  color: #111;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  section.GridNav h1 {
+    font-size: 2.2rem;
+    width: 100%;
+    /*font-size: 2.2rem;
+    width:100%;*/
+  }
+}
+section.GridNav h3 {
+  grid-area: head3;
+  color: #111;
+  font-size: 1.3rem;
+}
+section.GridNav article {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+@media (max-width: 768px) {
+  section.GridNav article {
+    font-size: 1.6rem;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  section.GridNav article {
+    padding: 1.2rem 1rem;
+    border-bottom: 2px solid #bbb;
+    width: 100%;
+  }
+}
+section.GridNav article:nth-of-type(1) {
+  grid-area: lnk1;
+}
+section.GridNav article:nth-of-type(2) {
+  grid-area: lnk2;
+}
+section.GridNav article:nth-of-type(3) {
+  grid-area: lnk3;
+}
+section.GridNav article:nth-of-type(4) {
+  grid-area: lnk4;
+}
+section.GridNav article:nth-of-type(5) {
+  grid-area: lnk5;
+}
+
+/*************************
+change of a viev of the navmenu & nav panel for mobile devices*/
+@media (max-width: 768px) {
+  section.GridNav {
+    /*7 rows and 1column*/
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: "head1" "head3" "lnk1" "lnk2" "lnk3" "lnk4" "lnk5";
+  }
+  section.GridNav div {
+    padding: 0;
+  }
+}
+/*****************wrapper***/
+nav.homePg {
+  display: block;
+  background: url(img/banner.jpg) no-repeat center;
+  background-size: cover;
+  text-align: center;
+  overflow: auto;
+}
+nav.homePg div {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin: 1em auto;
+  padding: 10em 0;
+}
+@media (max-width: 768px) {
+  nav.homePg div {
+    padding: 2rem 0;
+  }
+}
+
+/*********
+marked button*/
+.buttonMrkStyle {
+  border-radius: 0.5em;
+  color: #fff;
+  background: #111;
+  -webkit-transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+  -o-transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+.buttonMrkStyle:hover {
+  color: #700;
+  background: #8f8;
+  cursor: pointer;
+}
+
+/********
+    norma button*/
+.btnNorm {
+  text-decoration: none;
+}
+.btnNorm:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #008;
+}
+
+/* prototype- https://templated.co/synchronous  */
+
+/*# sourceMappingURL=main.css.map */
